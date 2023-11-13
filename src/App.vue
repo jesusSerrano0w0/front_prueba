@@ -1,30 +1,31 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <div v-if="!$store.state.isLoginIn">
+      <Login/>
+    </div>
+    <div v-else>
+      <router-view/>
+    </div>
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<script>
+  import Login from './components/Login.vue'
+  
+   export default{
+    created(){
+      const token=localStorage.getItem('token');
+      if(token){
+        this.$store.commit('isLoginIn',true)
+      }
+    },
+    data(){
+      return{
+        LogedIn:false,
+      }
+    },
+    components:{
+      Login
+    }
+   }
+</script>
