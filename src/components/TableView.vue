@@ -53,7 +53,7 @@
               <br>
 
               <div class="d-grid gap-2 d-md-block">
-                <button type="submit" class="btn btn-primary">Actualizar</button><br>
+                <button type="submit" class="btn btn-primary">Crear</button><br>
 
               </div>
             </div>
