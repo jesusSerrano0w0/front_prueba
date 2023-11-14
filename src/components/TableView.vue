@@ -21,7 +21,7 @@
 
             <div class="col-4">
               <label for="Nuevo_doc_codigo" class="form-label">Codigo</label>
-              <input type="text" class="form-control" id="Nuevo_doc_codigo" v-model="Nuevo_doc_codigo">
+              <input type="number" class="form-control" id="Nuevo_doc_codigo" v-model="Nuevo_doc_codigo">
             </div>
             <div class="col-4">
               <label for="Nuevo_doc_contenido" class="form-label">Contenido</label>
@@ -84,7 +84,7 @@
 
             <div class="col-4">
               <label for="doc_codigo" class="form-label">Codigo</label>
-              <input type="text" class="form-control" id="doc_codigo" v-model="docDatosEdit.doc_codigo">
+              <input type="number" class="form-control" id="doc_codigo" v-model="docDatosEdit.doc_codigo">
             </div>
             <div class="col-4">
               <label for="doc_contenido" class="form-label">Contenido</label>
